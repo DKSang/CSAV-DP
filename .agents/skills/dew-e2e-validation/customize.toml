@@ -1,0 +1,46 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-e2e-validation.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/stories/**/*.md",
+  "file:{project-root}/**/story-validation/**/*.md",
+  "file:{project-root}/**/completion-notes/**/*.md",
+  "file:{project-root}/**/story-evidence/**/*.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/observability-plan.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/metric-serving-contract.md",
+  "file:{project-root}/**/trust-and-limitations-statement.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/dq-rule-catalog.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+e2e_validation_report_template = "assets/e2e-validation-report-template.md"
+e2e_path_rubric = "assets/e2e-path-rubric.md"
+e2e_failure_rubric = "assets/e2e-failure-rubric.md"
+e2e_validation_matrix_template = "assets/e2e-validation-matrix-template.md"
+checklist = "checklist.md"
+
+e2e_output_path = "{implementation_artifacts}/e2e-validation"
+run_folder_pattern = "e2e-validation-{project_name}-{date}"
+
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

@@ -1,0 +1,29 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-sprint-planning.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/epics.md",
+  "file:{project-root}/**/story-map.md",
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+sprint_status_template = "assets/sprint-status-template.yaml"
+sprint_plan_template = "assets/sprint-plan-template.md"
+story_status_rubric = "assets/story-status-rubric.md"
+checklist = "checklist.md"
+
+sprint_output_path = "{implementation_artifacts}/sprint"
+stories_output_path = "{implementation_artifacts}/stories"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

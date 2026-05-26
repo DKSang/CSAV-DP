@@ -1,0 +1,31 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-source-assessment.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/source-inventory.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-source-matrix.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+source_scorecard_template = "assets/source-scorecard-template.md"
+source_risk_rubric = "assets/source-risk-rubric.md"
+source_priority_rubric = "assets/source-priority-rubric.md"
+checklist = "checklist.md"
+
+assessment_output_path = "{planning_artifacts}/source-assessment"
+run_folder_pattern = "source-assessment-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

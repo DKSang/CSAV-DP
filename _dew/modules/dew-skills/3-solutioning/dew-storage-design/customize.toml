@@ -1,0 +1,37 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-storage-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/architecture-decision-record.md",
+  "file:{project-root}/**/architecture-caveat-carryover.md",
+  "file:{project-root}/**/requirement-gate-report.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+storage_design_template = "assets/storage-design-template.md"
+storage_decision_record_template = "assets/storage-decision-record-template.md"
+source_to_storage_mapping_template = "assets/source-to-storage-mapping-template.md"
+storage_layer_rubric = "assets/storage-layer-rubric.md"
+metadata_standard_rubric = "assets/metadata-standard-rubric.md"
+raw_retention_rubric = "assets/raw-retention-rubric.md"
+checklist = "checklist.md"
+
+storage_output_path = "{planning_artifacts}/storage-design"
+run_folder_pattern = "storage-design-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

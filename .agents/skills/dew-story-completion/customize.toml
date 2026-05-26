@@ -1,0 +1,32 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-story-completion.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/stories/**/*.md",
+  "file:{project-root}/**/story-validation/**/*.md",
+  "file:{project-root}/**/code-review/**/*.md",
+  "file:{project-root}/**/dev-notes/**/*.md",
+  "file:{project-root}/**/story-evidence/**/*.md",
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+completion_notes_template = "assets/completion-notes-template.md"
+learning_capture_template = "assets/learning-capture-template.md"
+sprint_status_update_rubric = "assets/sprint-status-update-rubric.md"
+checklist = "checklist.md"
+
+completion_output_path = "{implementation_artifacts}/completion-notes"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

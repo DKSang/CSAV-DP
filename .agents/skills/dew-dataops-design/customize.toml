@@ -1,0 +1,39 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-dataops-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/governance-security-review.md",
+  "file:{project-root}/**/access-control-matrix.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+dataops_runbook_template = "assets/dataops-runbook-template.md"
+observability_plan_template = "assets/observability-plan-template.md"
+operational_readiness_report_template = "assets/operational-readiness-report-template.md"
+monitoring_alerting_rubric = "assets/monitoring-alerting-rubric.md"
+incident_backfill_rubric = "assets/incident-backfill-rubric.md"
+ci_cd_environment_rubric = "assets/ci-cd-environment-rubric.md"
+checklist = "checklist.md"
+
+dataops_output_path = "{planning_artifacts}/dataops-design"
+run_folder_pattern = "dataops-design-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

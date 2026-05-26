@@ -1,0 +1,36 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-data-model-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/business-rule-catalog.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+data_model_spec_template = "assets/data-model-spec-template.md"
+kpi_to_model_mapping_template = "assets/kpi-to-model-mapping-template.md"
+model_grain_rubric = "assets/model-grain-rubric.md"
+dimensional_modeling_rubric = "assets/dimensional-modeling-rubric.md"
+history_scd_rubric = "assets/history-scd-rubric.md"
+checklist = "checklist.md"
+
+model_output_path = "{planning_artifacts}/data-model-design"
+run_folder_pattern = "data-model-design-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

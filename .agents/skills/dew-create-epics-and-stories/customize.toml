@@ -1,0 +1,42 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-create-epics-and-stories.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/requirement-gate-report.md",
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/governance-security-review.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/operational-readiness-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+epics_template = "assets/epics-template.md"
+story_map_template = "assets/story-map-template.md"
+epic_readiness_rubric = "assets/epic-readiness-rubric.md"
+data_engineering_epic_patterns = "assets/data-engineering-epic-patterns.md"
+dependency_mapping_rubric = "assets/dependency-mapping-rubric.md"
+checklist = "checklist.md"
+
+epics_output_path = "{planning_artifacts}/epics-and-stories"
+run_folder_pattern = "epics-stories-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

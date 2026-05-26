@@ -1,0 +1,41 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-learning-capture.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-documentation.md",
+  "file:{project-root}/**/data-product-readme.md",
+  "file:{project-root}/**/release-readiness-report.md",
+  "file:{project-root}/**/e2e-validation-report.md",
+  "file:{project-root}/**/completion-notes/**/*.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/dataops-runbook.md",
+]
+
+on_complete = ""
+
+learning_retrospective_template = "assets/learning-retrospective-template.md"
+fde_learning_map_template = "assets/fde-learning-map-template.md"
+mistake_pattern_template = "assets/mistake-pattern-template.md"
+learning_depth_rubric = "assets/learning-depth-rubric.md"
+fde_concept_map = "assets/fde-concept-map.md"
+checklist = "checklist.md"
+
+learning_output_path = "{learning_artifacts}/learning-capture"
+run_folder_pattern = "learning-capture-{project_name}-{date}"
+
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+decision_log_path = "{planning_artifacts}/.decision-log.md"

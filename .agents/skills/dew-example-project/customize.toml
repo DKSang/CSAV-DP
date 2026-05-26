@@ -1,0 +1,33 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-example-project.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/installation-guide.md",
+  "file:{project-root}/**/usage-guide.md",
+  "file:{project-root}/**/command-reference.md",
+  "file:{project-root}/**/final-release-notes.md",
+  "file:{project-root}/src/dew-skills/module-help.csv",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+example_project_walkthrough_template = "assets/example-project-walkthrough-template.md"
+quickstart_scenario_template = "assets/quickstart-scenario-template.md"
+example_artifact_map_template = "assets/example-artifact-map-template.md"
+example_quality_rubric = "assets/example-quality-rubric.md"
+demo_flow_rubric = "assets/demo-flow-rubric.md"
+checklist = "checklist.md"
+
+example_output_path = "{implementation_artifacts}/example-project"
+run_folder_pattern = "example-project-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

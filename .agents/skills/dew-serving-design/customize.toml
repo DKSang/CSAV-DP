@@ -1,0 +1,39 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-serving-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/requirement-gate-report.md",
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/kpi-to-model-mapping.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/dq-rule-catalog.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/business-rule-catalog.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+serving_spec_template = "assets/serving-data-product-spec-template.md"
+metric_contract_template = "assets/metric-serving-contract-template.md"
+trust_limitations_template = "assets/trust-limitations-statement-template.md"
+serving_mode_rubric = "assets/serving-mode-rubric.md"
+self_service_rubric = "assets/self-service-rubric.md"
+checklist = "checklist.md"
+
+serving_output_path = "{planning_artifacts}/serving-design"
+run_folder_pattern = "serving-design-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

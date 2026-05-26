@@ -1,0 +1,34 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-skill-qa.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/src/dew-skills/module.yaml",
+  "file:{project-root}/src/dew-skills/module-help.csv",
+  "file:{project-root}/src/dew-skills/**/*.md",
+  "file:{project-root}/src/dew-skills/**/*.toml",
+  "file:{project-root}/src/dew-skills/**/*.yaml",
+  "file:{project-root}/src/dew-skills/**/*.csv",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+skill_qa_report_template = "assets/skill-qa-report-template.md"
+module_catalog_audit_template = "assets/module-catalog-audit-template.md"
+skill_structure_rubric = "assets/skill-structure-rubric.md"
+cross_link_validation_rubric = "assets/cross-link-validation-rubric.md"
+final_qa_gate_rubric = "assets/final-qa-gate-rubric.md"
+checklist = "checklist.md"
+
+qa_output_path = "{implementation_artifacts}/skill-qa"
+run_folder_pattern = "skill-qa-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

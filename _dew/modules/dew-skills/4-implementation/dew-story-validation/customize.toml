@@ -1,0 +1,35 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-story-validation.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/stories/**/*.md",
+  "file:{project-root}/**/story-context/**/*.md",
+  "file:{project-root}/**/dev-notes/**/*.md",
+  "file:{project-root}/**/code-review/**/*.md",
+  "file:{project-root}/**/story-evidence/**/*.md",
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+validation_report_template = "assets/story-validation-report-template.md"
+validation_evidence_rubric = "assets/validation-evidence-rubric.md"
+status_transition_rubric = "assets/story-status-transition-rubric.md"
+done_gate_rubric = "assets/done-gate-rubric.md"
+checklist = "checklist.md"
+
+validation_output_path = "{implementation_artifacts}/story-validation"
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

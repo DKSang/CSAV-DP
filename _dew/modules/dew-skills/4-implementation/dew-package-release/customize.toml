@@ -1,0 +1,33 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-package-release.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/skill-qa-report.md",
+  "file:{project-root}/**/module-catalog-audit.md",
+  "file:{project-root}/src/dew-skills/module.yaml",
+  "file:{project-root}/src/dew-skills/module-help.csv",
+  "file:{project-root}/src/dew-skills/**/*.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+packaging_report_template = "assets/packaging-report-template.md"
+final_release_notes_template = "assets/final-release-notes-template.md"
+release_package_checklist_template = "assets/release-package-checklist-template.md"
+versioning_rubric = "assets/versioning-rubric.md"
+release_risk_rubric = "assets/release-risk-rubric.md"
+checklist = "checklist.md"
+
+package_output_path = "{implementation_artifacts}/package-release"
+run_folder_pattern = "package-release-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

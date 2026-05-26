@@ -1,0 +1,34 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-installation-guide.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/packaging-report.md",
+  "file:{project-root}/**/final-release-notes.md",
+  "file:{project-root}/**/release-package-checklist.md",
+  "file:{project-root}/src/dew-skills/module.yaml",
+  "file:{project-root}/src/dew-skills/module-help.csv",
+  "file:{project-root}/**/skill-qa-report.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+installation_guide_template = "assets/installation-guide-template.md"
+usage_guide_template = "assets/usage-guide-template.md"
+command_reference_template = "assets/command-reference-template.md"
+troubleshooting_template = "assets/troubleshooting-template.md"
+installation_quality_rubric = "assets/installation-quality-rubric.md"
+checklist = "checklist.md"
+
+install_docs_output_path = "{implementation_artifacts}/installation"
+run_folder_pattern = "installation-guide-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

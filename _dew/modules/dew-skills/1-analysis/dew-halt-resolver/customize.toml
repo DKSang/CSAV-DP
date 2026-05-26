@@ -1,0 +1,25 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-halt-resolver.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+halt_template = "assets/halt-template.md"
+halt_catalog = "assets/halt-catalog.md"
+halt_resolution_template = "assets/halt-resolution-template.md"
+checklist = "checklist.md"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

@@ -1,0 +1,30 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-code-review.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/stories/**/*.md",
+  "file:{project-root}/**/story-context/**/*.md",
+  "file:{project-root}/**/dev-notes/**/*.md",
+  "file:{project-root}/**/story-evidence/**/*.md",
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+code_review_report_template = "assets/code-review-report-template.md"
+review_finding_rubric = "assets/review-finding-rubric.md"
+data_engineering_review_layers = "assets/data-engineering-review-layers.md"
+review_decision_rubric = "assets/review-decision-rubric.md"
+checklist = "checklist.md"
+
+review_output_path = "{implementation_artifacts}/code-review"
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"

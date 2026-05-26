@@ -1,0 +1,27 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-kpi-prototype.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/sample-computation-plan.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+prototype_template = "assets/kpi-prototype-template.md"
+sample_output_template = "assets/kpi-sample-output-template.md"
+checklist = "checklist.md"
+
+prototype_output_path = "{evidence_artifacts}/kpi-feasibility"
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

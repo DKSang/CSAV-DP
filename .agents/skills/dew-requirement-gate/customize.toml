@@ -1,0 +1,44 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-requirement-gate.
+#
+# Override files:
+#   {project-root}/_dew/custom/dew-requirement-gate.toml
+#   {project-root}/_dew/custom/dew-requirement-gate.user.toml
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+  "file:{project-root}/**/brief.md",
+  "file:{project-root}/**/business-discovery.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-source-matrix.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/source-inventory.md",
+  "file:{project-root}/**/source-scorecard.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+gate_report_template = "assets/requirement-gate-report-template.md"
+readiness_rubric = "assets/requirement-readiness-rubric.md"
+caveat_register_template = "assets/caveat-register-template.md"
+architecture_readiness_matrix_template = "assets/architecture-readiness-matrix-template.md"
+decision_options = "assets/requirement-gate-decision-options.md"
+checklist = "checklist.md"
+
+gate_output_path = "{planning_artifacts}/requirement-gate"
+run_folder_pattern = "requirement-gate-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

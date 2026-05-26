@@ -1,0 +1,43 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-project-documentation.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/release-readiness-report.md",
+  "file:{project-root}/**/release-notes.md",
+  "file:{project-root}/**/release-checklist.md",
+  "file:{project-root}/**/e2e-validation-report.md",
+  "file:{project-root}/**/final-evidence-review.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/metric-serving-contract.md",
+  "file:{project-root}/**/trust-and-limitations-statement.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/governance-security-review.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/observability-plan.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+project_documentation_template = "assets/project-documentation-template.md"
+data_product_readme_template = "assets/data-product-readme-template.md"
+data_dictionary_template = "assets/data-dictionary-template.md"
+runbook_summary_template = "assets/runbook-summary-template.md"
+documentation_quality_rubric = "assets/documentation-quality-rubric.md"
+checklist = "checklist.md"
+
+documentation_output_path = "{implementation_artifacts}/documentation"
+run_folder_pattern = "documentation-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

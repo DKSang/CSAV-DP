@@ -1,0 +1,36 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-dev-story.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/stories/**/*.md",
+  "file:{project-root}/**/story-context/**/*.md",
+  "file:{project-root}/**/readiness-reviews/**/*.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+dev_notes_template = "assets/dev-notes-template.md"
+evidence_manifest_template = "assets/evidence-manifest-template.md"
+file_list_template = "assets/file-list-template.md"
+implementation_task_rubric = "assets/implementation-task-rubric.md"
+dev_halt_rubric = "assets/dev-halt-rubric.md"
+checklist = "checklist.md"
+
+stories_output_path = "{implementation_artifacts}/stories"
+dev_notes_output_path = "{implementation_artifacts}/dev-notes"
+story_evidence_output_path = "{evidence_artifacts}/story-evidence"
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

@@ -1,0 +1,41 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-kpi-feasibility.
+#
+# Override files:
+#   {project-root}/_dew/custom/dew-kpi-feasibility.toml
+#   {project-root}/_dew/custom/dew-kpi-feasibility.user.toml
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+  "file:{project-root}/**/brief.md",
+  "file:{project-root}/**/business-discovery.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-source-matrix.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+]
+
+on_complete = ""
+
+feasibility_report_template = "assets/kpi-feasibility-report-template.md"
+field_availability_template = "assets/field-availability-template.md"
+sample_computation_plan_template = "assets/sample-computation-plan-template.md"
+status_rubric = "assets/kpi-feasibility-status-rubric.md"
+checklist = "checklist.md"
+
+feasibility_output_path = "{planning_artifacts}/kpi-feasibility"
+run_folder_pattern = "kpi-feasibility-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
+
+prototype_output_path = "{evidence_artifacts}/kpi-feasibility"

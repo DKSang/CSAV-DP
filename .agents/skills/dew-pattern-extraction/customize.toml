@@ -1,0 +1,42 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-pattern-extraction.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/learning-retrospective.md",
+  "file:{project-root}/**/fde-learning-map.md",
+  "file:{project-root}/**/mistake-pattern-log.md",
+  "file:{project-root}/**/project-documentation.md",
+  "file:{project-root}/**/release-readiness-report.md",
+  "file:{project-root}/**/e2e-validation-report.md",
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+reusable_patterns_template = "assets/reusable-patterns-template.md"
+pattern_catalog_template = "assets/pattern-catalog-template.md"
+pattern_quality_rubric = "assets/pattern-quality-rubric.md"
+anti_pattern_template = "assets/anti-pattern-template.md"
+reuse_decision_rubric = "assets/reuse-decision-rubric.md"
+checklist = "checklist.md"
+
+pattern_output_path = "{learning_artifacts}/patterns"
+run_folder_pattern = "patterns-{project_name}-{date}"
+
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+decision_log_path = "{planning_artifacts}/.decision-log.md"

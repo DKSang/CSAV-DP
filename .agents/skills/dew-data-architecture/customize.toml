@@ -1,0 +1,42 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-data-architecture.
+#
+# Override files:
+#   {project-root}/_dew/custom/dew-data-architecture.toml
+#   {project-root}/_dew/custom/dew-data-architecture.user.toml
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/requirement-gate-report.md",
+  "file:{project-root}/**/architecture-readiness-matrix.md",
+  "file:{project-root}/**/caveat-register.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+architecture_template = "assets/data-architecture-template.md"
+adr_template = "assets/architecture-decision-record-template.md"
+caveat_carryover_template = "assets/architecture-caveat-carryover-template.md"
+architecture_pattern_rubric = "assets/architecture-pattern-rubric.md"
+technology_decision_rubric = "assets/technology-decision-rubric.md"
+lifecycle_guide = "assets/data-lifecycle-architecture-guide.md"
+checklist = "checklist.md"
+
+architecture_output_path = "{planning_artifacts}/data-architecture"
+run_folder_pattern = "data-architecture-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

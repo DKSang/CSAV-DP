@@ -1,0 +1,42 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-source-validation.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/source-inventory.md",
+  "file:{project-root}/**/source-scorecard.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-source-matrix.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+]
+
+on_complete = ""
+
+validation_report_template = "assets/source-validation-report-template.md"
+source_sample_template = "assets/source-sample-template.md"
+schema_snapshot_template = "assets/schema-snapshot-template.md"
+source_profile_template = "assets/source-profile-template.md"
+status_rubric = "assets/source-validation-status-rubric.md"
+checklist = "checklist.md"
+
+validation_output_path = "{planning_artifacts}/source-validation"
+run_folder_pattern = "source-validation-{project_name}-{date}"
+
+source_sample_output_path = "{evidence_artifacts}/source-samples"
+schema_snapshot_output_path = "{evidence_artifacts}/schema-snapshots"
+profile_output_path = "{evidence_artifacts}/profiling-reports"
+api_log_output_path = "{evidence_artifacts}/api-call-logs"
+contract_test_output_path = "{evidence_artifacts}/source-contract-tests"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

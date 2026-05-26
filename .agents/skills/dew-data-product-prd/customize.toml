@@ -1,0 +1,29 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-data-product-prd.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/brief.md",
+  "file:{project-root}/**/business-discovery.md",
+  "file:{project-root}/**/kpi-catalog.md",
+  "file:{project-root}/**/kpi-source-matrix.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+prd_template = "assets/data-product-prd-template.md"
+validation_rubric = "assets/data-product-prd-validation-rubric.md"
+checklist = "checklist.md"
+
+prd_output_path = "{planning_artifacts}/data-product-prds"
+run_folder_pattern = "data-product-prd-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

@@ -1,0 +1,40 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-release-readiness.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/e2e-validation-report.md",
+  "file:{project-root}/**/final-evidence-review.md",
+  "file:{project-root}/**/evidence-coverage-matrix.md",
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/operational-readiness-report.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/trust-and-limitations-statement.md",
+  "file:{project-root}/**/governance-security-review.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/observability-plan.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+release_readiness_report_template = "assets/release-readiness-report-template.md"
+release_checklist_template = "assets/release-checklist-template.md"
+release_notes_template = "assets/release-notes-template.md"
+release_decision_rubric = "assets/release-decision-rubric.md"
+release_risk_rubric = "assets/release-risk-rubric.md"
+checklist = "checklist.md"
+
+release_output_path = "{implementation_artifacts}/release-readiness"
+run_folder_pattern = "release-readiness-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

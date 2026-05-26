@@ -1,0 +1,21 @@
+# DataOps Design Checklist
+
+- [ ] Storage design loaded.
+- [ ] Ingestion design loaded.
+- [ ] Transformation design loaded.
+- [ ] Data model spec loaded.
+- [ ] DQ rules loaded.
+- [ ] Serving design loaded.
+- [ ] Governance/security review loaded.
+- [ ] Operational mode selected by user.
+- [ ] Run schedule defined.
+- [ ] Monitoring plan defined.
+- [ ] Alerting plan defined.
+- [ ] Incident process defined.
+- [ ] Replay/backfill process defined.
+- [ ] Change process defined.
+- [ ] Environment strategy defined.
+- [ ] CI/CD handoff defined.
+- [ ] Operational readiness report created.
+- [ ] Decision log updated.
+- [ ] Learning log updated if enabled.

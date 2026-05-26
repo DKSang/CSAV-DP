@@ -1,0 +1,38 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-data-quality-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/kpi-to-model-mapping.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/business-rule-catalog.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/source-contract-test*.md",
+  "file:{project-root}/**/kpi-feasibility-report.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+data_quality_rules_template = "assets/data-quality-rules-template.md"
+dq_rule_catalog_template = "assets/dq-rule-catalog-template.md"
+dq_severity_rubric = "assets/dq-severity-rubric.md"
+dq_rule_type_rubric = "assets/dq-rule-type-rubric.md"
+dq_gate_policy_template = "assets/dq-gate-policy-template.md"
+checklist = "checklist.md"
+
+dq_output_path = "{planning_artifacts}/data-quality-design"
+run_folder_pattern = "data-quality-design-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

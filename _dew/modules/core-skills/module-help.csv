@@ -1,0 +1,8 @@
+module,skill,display-name,menu-code,description,action,args,phase,preceded-by,followed-by,required,output-location,outputs
+Core,_meta,,,,,,,,,false,,
+Core,dew-help,DEW Help,DH,Recommend the next DEW skill and explain the current workflow state.,,,anytime,,,false,,
+Core,dew-index-docs,Index Docs,ID,Generate or update an index.md for docs and artifact folders.,,,anytime,,,false,,
+Core,dew-shard-doc,Shard Document,SD,Use when doc becomes too large to manage effectively.,,[path],anytime,,,false,,
+Core,dew-review-adversarial,Adversarial Review,AR,Use for critical quality review before finalizing deliverables.,,[path],anytime,,,false,,
+Core,dew-review-edge-case-hunter,Edge Case Hunter Review,ECH,Use alongside adversarial review for edge-case coverage.,,[path],anytime,,,false,,
+Core,dew-customize,DEW Customize,DC,Customize DEW agent or workflow behavior through TOML overrides.,,,anytime,,,false,{project-root}/_dew/custom,TOML override files

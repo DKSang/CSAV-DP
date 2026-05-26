@@ -1,0 +1,27 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-business-discovery.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+  "file:{project-root}/**/brief.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+discovery_template = "assets/business-discovery-template.md"
+question_map_template = "assets/business-question-map-template.md"
+checklist = "checklist.md"
+
+discovery_output_path = "{planning_artifacts}/business-discovery"
+run_folder_pattern = "business-discovery-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

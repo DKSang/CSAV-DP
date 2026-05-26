@@ -1,0 +1,39 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-final-evidence-review.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/story-evidence/**/*.md",
+  "file:{project-root}/**/story-validation/**/*.md",
+  "file:{project-root}/**/code-review/**/*.md",
+  "file:{project-root}/**/completion-notes/**/*.md",
+  "file:{project-root}/**/e2e-validation-report.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/dq-rule-catalog.md",
+  "file:{project-root}/**/metric-serving-contract.md",
+  "file:{project-root}/**/trust-and-limitations-statement.md",
+  "file:{project-root}/**/observability-plan.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+final_evidence_review_template = "assets/final-evidence-review-template.md"
+evidence_coverage_matrix_template = "assets/evidence-coverage-matrix-template.md"
+evidence_severity_rubric = "assets/evidence-severity-rubric.md"
+evidence_gap_rubric = "assets/evidence-gap-rubric.md"
+checklist = "checklist.md"
+
+evidence_review_output_path = "{implementation_artifacts}/final-evidence-review"
+run_folder_pattern = "final-evidence-review-{project_name}-{date}"
+
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"

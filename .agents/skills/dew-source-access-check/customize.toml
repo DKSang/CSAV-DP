@@ -1,0 +1,26 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-source-access-check.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/source-inventory.md",
+  "file:{project-root}/**/source-scorecard.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+]
+
+on_complete = ""
+
+access_log_template = "assets/access-check-log-template.md"
+connection_notes_template = "assets/source-connection-notes-template.md"
+checklist = "checklist.md"
+
+access_log_output_path = "{evidence_artifacts}/api-call-logs"
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

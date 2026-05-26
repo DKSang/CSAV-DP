@@ -1,0 +1,61 @@
+# DEW Sprint Status
+#
+# Status values:
+# Epic:
+#   backlog | in-progress | done
+# Story:
+#   backlog | ready-for-dev | in-progress | review | done | blocked
+
+project: "{project_name}"
+created: "{YYYY-MM-DD}"
+updated: "{YYYY-MM-DD}"
+workflow: dew
+
+epics:
+  EPIC-01:
+    title: "Foundation and Project Setup"
+    status: backlog
+    stories:
+      "1.1":
+        title: "Initialize project structure"
+        status: backlog
+
+  EPIC-02:
+    title: "Source Access and Bronze Ingestion"
+    status: backlog
+    stories: {}
+
+  EPIC-03:
+    title: "Source Contract and DQ Prechecks"
+    status: backlog
+    stories: {}
+
+  EPIC-04:
+    title: "Silver Transformation"
+    status: backlog
+    stories: {}
+
+  EPIC-05:
+    title: "Gold Modeling and KPI Computation"
+    status: backlog
+    stories: {}
+
+  EPIC-06:
+    title: "Data Quality Evidence"
+    status: backlog
+    stories: {}
+
+  EPIC-07:
+    title: "Serving Data Product"
+    status: backlog
+    stories: {}
+
+  EPIC-08:
+    title: "Governance Documentation"
+    status: backlog
+    stories: {}
+
+  EPIC-09:
+    title: "DataOps and Observability"
+    status: backlog
+    stories: {}

@@ -1,0 +1,25 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-evidence-check.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+]
+
+on_complete = ""
+
+evidence_index_template = "assets/evidence-index-template.md"
+phase_done_checklist = "assets/phase-done-evidence-checklist.md"
+checklist = "checklist.md"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

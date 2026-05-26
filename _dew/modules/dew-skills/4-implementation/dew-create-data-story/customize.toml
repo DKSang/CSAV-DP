@@ -1,0 +1,42 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-create-data-story.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/sprint-status.yaml",
+  "file:{project-root}/**/epics.md",
+  "file:{project-root}/**/story-map.md",
+  "file:{project-root}/**/data-architecture.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/transformation-design.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/governance-security-review.md",
+  "file:{project-root}/**/dataops-runbook.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+data_story_template = "assets/data-story-template.md"
+story_context_pack_template = "assets/story-context-pack-template.md"
+acceptance_criteria_rubric = "assets/story-acceptance-criteria-rubric.md"
+evidence_requirements_rubric = "assets/story-evidence-requirements-rubric.md"
+checklist = "checklist.md"
+
+stories_output_path = "{implementation_artifacts}/stories"
+story_context_output_path = "{implementation_artifacts}/story-context"
+sprint_status_path = "{implementation_artifacts}/sprint/sprint-status.yaml"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"

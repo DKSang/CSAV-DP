@@ -1,0 +1,39 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for dew-governance-security-design.
+
+[workflow]
+
+activation_steps_prepend = []
+activation_steps_append = []
+
+persistent_facts = [
+  "file:{project-root}/**/serving-data-product-spec.md",
+  "file:{project-root}/**/metric-serving-contract.md",
+  "file:{project-root}/**/trust-and-limitations-statement.md",
+  "file:{project-root}/**/data-product-prd.md",
+  "file:{project-root}/**/data-model-spec.md",
+  "file:{project-root}/**/data-quality-rules.md",
+  "file:{project-root}/**/storage-design.md",
+  "file:{project-root}/**/ingestion-design.md",
+  "file:{project-root}/**/source-validation-report.md",
+  "file:{project-root}/**/validation-evidence-index.md",
+  "file:{project-root}/**/.decision-log.md",
+  "file:{project-root}/**/.learning-log.md",
+]
+
+on_complete = ""
+
+governance_security_review_template = "assets/governance-security-review-template.md"
+access_control_matrix_template = "assets/access-control-matrix-template.md"
+privacy_posture_rubric = "assets/privacy-posture-rubric.md"
+lineage_metadata_rubric = "assets/lineage-metadata-rubric.md"
+governance_decision_record_template = "assets/governance-decision-record-template.md"
+checklist = "checklist.md"
+
+governance_output_path = "{planning_artifacts}/governance-security-design"
+run_folder_pattern = "governance-security-{project_name}-{date}"
+
+decision_log_path = "{planning_artifacts}/.decision-log.md"
+learning_log_path = "{learning_artifacts}/.learning-log.md"
+evidence_index_path = "{evidence_artifacts}/validation-evidence-index.md"
